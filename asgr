@@ -31,6 +31,7 @@ public class Arrays {
 
             if (answer == 1) {
                 System.out.println("Разумно и безопасно. Вы остались целы, хоть и не узнали, что это было");
+                an--;
                 gameOver = true;
             }
 
@@ -47,16 +48,21 @@ public class Arrays {
                 } else {
                     q[0] = "Звук становится громче и громче";
                 }
+                an--;
 
             }
-
-            if (answercount>=10) {
-                System.out.println("Вы сделали больше шагов чем можно было. Игра окончена.");
-                gameOver = true;
-            }
+            
+                if (answercount >= 10) {
+                    System.out.println("Вы сделали больше шагов чем можно было. Игра окончена.");
+                    gameOver = true;
+                }
+            
             if (an >= 5){
                 System.out.println("Свет всё же включился и я увидел там своего котейку.");
                 gameOver = true;
+            }
+            if (an == -1){
+                an++;
             }
         }
     }
